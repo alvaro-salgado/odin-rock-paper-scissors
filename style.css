@@ -1,0 +1,46 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main-container{
+    height: 940px;
+    background-color: #A4C3B2;
+    padding: 2% 10%;
+    color: #f0fefe;
+    text-align: center;
+}
+
+
+.text-title{
+    font-size: 3em;
+    height: 10%;
+}
+
+.text-instructions{
+    font-size: 1.5em;
+    height: 10%;
+}
+
+.game{
+    height: 80%;
+}
+
+.options{
+    height: 30%;
+    /* background-color: #74C69D; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn{
+    width: 150px;
+    height: 100px;
+    background-color: #6B9080;
+    color: #f0fefe;
+    font-size: 2em;
+    border-radius: 10px;
+}
+.res{
+    /* background-color: #EAF4F4; */
+    font-size: 3em;
+}

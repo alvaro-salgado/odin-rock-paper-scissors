@@ -5,74 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-        // Rock paper scisors game
-
-        // Random Computer choise
-        function getComputerChoise (){
-            let option = Math.floor(Math.random() * 3);
-            let hand = "";
-            if (option == 0){
-                hand = "rock";
-            }
-            else if (option == 1){
-                hand = "paper"
-            }
-            else if (option == 2){
-                hand = "scissors"
-            }
-            return hand;
-        }
-
-        // Play round
-
-        function playRound (player, computer){
-            player_choise = player.toLowerCase();
-            computer_choise = computer.toLowerCase();
-
-            if ((player_choise == "rock" && computer_choise == "rock")||
-                (player_choise == "paper" && computer_choise == "paper")||
-                (player_choise == "scissors" && computer_choise == "scissors")){
-                    return "It's a tie, both choose " + player_choise;
-                }
-
-            // When player selects Rock
-            if (player_choise == "rock" && computer_choise == "scissors"){
-                return "You Win! Rock beats Scissors"
-            }
-            else if (player_choise == "rock" && computer_choise == "paper"){
-                return "You Lose! Paper beats Rock"
-            }
-
-            // When player selects Paper
-            if (player_choise == "paper" && computer_choise == "scissors"){
-                return "You Lose! Scissors beats Paper"
-            }
-            else if (player_choise == "paper" && computer_choise == "rock"){
-                return "You Win! Paper beats Rock"
-            }
-
-            //When player selects Scissors
-            if (player_choise == "scissors" && computer_choise == "rock"){
-                return "You Lose! Rock beats Scissors"
-            }
-            else if (player_choise == "scissors" && computer_choise == "paper"){
-                return "You Win! Scissors beats Paper"
-            }
-
-        }
-
-        function game (){
-            // This plays 5 rounds
-            let playerSelection = "";
-            for (let i = 1; i <= 5; i++){
-                playerSelection = prompt("Round: " + i + " Chose Rock, Paper or Scissors: ");
-                console.log(playRound(playerSelection, getComputerChoise()));
-            }
-        }
-        game();
-    </script>
+    <div class="main-container">
+        <h1 class="text-title">Rock Paper Scissors</h1>
+        <h2 class="text-instructions">Choose your weapon</h2>
+        <div class="game">
+            <div class="options">
+                <button class="btn" id="rock">Rock</button>
+                <button class="btn" id="paper">Paper</button>
+                <button class="btn" id="scissors">Scissors</button>
+            </div>
+        </div>
+        
+    </div>
 </body>
 </html>
